@@ -39,7 +39,7 @@ exports.register = async (req,res,next) => {
                 email,
             }
         })
-    
+          
         if(isEmailExist ) {
             return createError(400, "Email already exist")
         }
@@ -47,6 +47,8 @@ exports.register = async (req,res,next) => {
         const newUser = await prisma.user.create({
             data: {
                 email,
+                
+                
             }
         })
         res.json({ user:newUser })

@@ -1,5 +1,5 @@
 const createError = (statusCode,message) => {
-    const eror = new Error(message)
+    const error = new Error(message)
     error.statusCode = statusCode;
 
     throw error;
